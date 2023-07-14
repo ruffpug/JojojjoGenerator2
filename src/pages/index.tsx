@@ -1,7 +1,8 @@
-import { Box, Button, Heading, Image as ChakraImage, Spacer, Textarea } from '@chakra-ui/react'
+import { Box, Button, Image as ChakraImage, Spacer, Textarea } from '@chakra-ui/react'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/router'
 import React, { useRef, useEffect, useState } from 'react'
+import AppHeader from '@/AppHeader'
 import JojojjoCanvas, { JojojjoCanvasHandler } from '@/JojojjoCanvas'
 
 //  画像横幅
@@ -67,7 +68,7 @@ const Content = (props: ContentProps) => {
 
   return (
     <Box width="100%">
-      <Header />
+      <AppHeader />
       <main>
         <Box display="flex" flexFlow="column" alignItems="center" justifyContent="center">
           <Spacer margin="16px" />
@@ -109,16 +110,6 @@ const Content = (props: ContentProps) => {
         </Box>
       </main>
     </Box>
-  )
-}
-
-const Header = () => {
-  return (
-    <header style={{ backgroundColor: '#212529' }}>
-      <Heading padding="16px 24px" fontSize="20px" color="white">
-        じょじょっじょジェネレータ2
-      </Heading>
-    </header>
   )
 }
 
